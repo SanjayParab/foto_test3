@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fotographia</title>
+<style>
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: white;
+  margin: 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Menu {
+  background-image: url("../images/Aqua-bubble.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom ;
+  width: 1024px;
+  min-height: 682px;
+  margin: 15px auto 3px auto;
+  border: 1px solid #DDD;
+
+}
+
+
+a {
+  color: #333;
+}
+
+.name a {
+  text-decoration: none;
+}
+
+.tbl1 {
+  float: right;
+  margin: 15px;
+  text-align: right;
+  width: 370px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 32pt;
+}
+
+.links {
+  padding: 15px;
+}
+.links a {
+  margin-right: 15px;
+}
+</style>
+</head>
+<body >
+<div class="Menu">
+<div class="tbl1">
+  <div class="name">fotographiaa</div>
+  <div class="Sign-Up"> test
+    <%= link_to "Sign up now!", register_path %>
+  </div>
+</div>
+<div class="links">
+
+  <%= link_to "About", about_path %>
+  <a href="./">Home</a>
+  <a href="Contact ">Contact Us</a>
+  <a href="Sign-Up">Sign-Up</a>
+  <p> Link <%= link_to "Link Test" , self %> </p>
+</div>
+</div>
+
+</body>
+</html>

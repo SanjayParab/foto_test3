@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image name:</b>
+
+  <%= image_tag @phot.image.url %>
+  <%= image_tag @phot.image.url(:medium) %>
+
+
+</p>
+
+
+<%= link_to 'Edit', edit_phot_path(@phot) %> |
+<%= link_to 'Back', phots_path %>

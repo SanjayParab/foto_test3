@@ -1,0 +1,24 @@
+<h1>Sign up</h1>
+
+<%= form_for(@user) do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email_id %><br />
+    <%= f.text_field :email_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Password %><br />
+    <%= f.password_field :hashed_password %>
+  </div>
+ <div class="actions">
+    <%= f.submit "Sign up" %>
+    <button> <%= link_to "Cancel" , root_url %> </button>
+  </div>
+<% end %>

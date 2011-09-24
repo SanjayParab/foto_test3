@@ -1,0 +1,23 @@
+<h1>Listing phots</h1>
+
+<table>
+  <tr>
+    <th>Image name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @phots.each do |phot| %>
+  <tr>
+    <td><%= phot.image_name %></td>
+    <td><%= link_to 'Show', phot %></td>
+    <td><%= link_to 'Edit', edit_phot_path(phot) %></td>
+    <td><%= link_to 'Destroy', phot, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Phot', new_phot_path %>

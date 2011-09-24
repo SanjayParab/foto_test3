@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gallery:</b>
+  <%= @album.gallery_id %>
+</p>
+
+<p>
+  <b>Album:</b>
+  <%= @album.album_id %>
+</p>
+
+<p>
+  <b>Album name:</b>
+  <%= @album.album_name %>
+</p>
+
+<p>
+  <b>Album description:</b>
+  <%= @album.album_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>
+<%= link_to 'Add Photos' , new_phot_url%>
