@@ -44,7 +44,7 @@ class PhotsController < ApplicationController
 
     respond_to do |format|
       if @phot.save
-        format.html { redirect_to(@phot, :notice => 'Phot was successfully created.') }
+        format.html { redirect_to(@phot, :notice => 'Photograph was successfully created.') }
         format.xml  { render :xml => @phot, :status => :created, :location => @phot }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class PhotsController < ApplicationController
 
     respond_to do |format|
       if @phot.update_attributes(params[:phot])
-        format.html { redirect_to(@phot, :notice => 'Phot was successfully updated.') }
+        format.html { redirect_to(@phot, :notice => 'Photgraph was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

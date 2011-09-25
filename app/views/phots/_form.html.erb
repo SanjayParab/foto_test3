@@ -11,12 +11,15 @@
     </div>
   <% end %>
 
-
+  <div class="field">
+    <%= f.label :image_name %><br />
+    <%= f.text_field :image_name %>
+  </div>
   <div class="field">
     <br><%= f.label :image %><br/>
     <%= f.file_field :image %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" >
+    <%= f.submit name ="Upload  It!"%>
   </div>
 <% end %>

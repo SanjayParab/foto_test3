@@ -1,47 +1,66 @@
-FotoTest3::Application.routes.draw do
-
-  resources :phots
-
-  resources :albums
-
-  resources :galleries
+FotoTest3::Application.routes.draw do  |map|
 
   resources :users
 
-  match '/about',   :to => 'pages#about'
-  match '/home' ,   :to => 'home#index'
-  match '/contact', :to => 'pages#contact'
-  match  '/gallery', :to => 'galleries#index'
+  resources :galleries
 
-  # Relation between uses & galleries
-  #map.resources :users do |users|
-  #  users.resources :galleries
-  #end
+  resources :albums
 
-  get "sessions/new"
-
-  match '/register',  :to => 'users#new'
-
+  resources :phots
 
   resources :sessions, :only => [:new, :create, :destroy]
 
-  get "home/index"
+  # Resource Relationships
+     resources :users do
+        resources :galleries do
+           resources :albums do
+              resources :phots
+            end
+        end
+     end
 
+  # Route Maps
+  #map.connect 'albums/create/:id' , :controller => "albums" , :action => "create"
+  #map.connect 'albums/new/:id' , :controller => "albums" , :action => "new"
+  #map.connect 'albums/show/:id' , :controller => "albums" , :action => "show"
+  #map.connect 'albums/delete/:id' , :controller => "albums" , :action => "destroy"
+  ##map.connect '', :controller => "albums", :action => "index"
+  #map.connect 'music', :controller => "albums", :action => "index"
+
+  #map.connect ':controller/:action/:id'
+
+
+  #match '/about',   :to => 'pages#about'
+  #match '/home' ,   :to => 'home#index'
+  #match '/contact', :to => 'pages#contact'
+  #match  '/gallery', :to => 'galleries#index'
+  #
+  #
+  ## Relation between uses & galleries
+  ##map.resources :users do |users|
+  ##  users.resources :galleries
+  ##end
+  #
+  #get "sessions/new"
+  #
+  #match '/register',  :to => 'users#new'
+
+
+  #get "home/index"
+
+  #Static Routing
   get "pages/home"
-
   get "pages/contact"
-
   get "pages/about"
-
   get "pages/register"
-
-  get "users/new"
-
-  get "galleries/index"
-
-  get "galleries/new"
-
-  get  "galleries/show"
+  #
+  #get "users/new"
+  #
+  #get "galleries/index"
+  #
+  #get "galleries/new"
+  #
+  #get  "galleries/show"
 
 
 

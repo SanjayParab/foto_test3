@@ -2,9 +2,9 @@ class GalleriesController < ApplicationController
   # GET /galleries
   # GET /galleries.xml
   def index
-    @galleries = Gallery.all
-    #user = User.find(params[:id])
-    #@galleries = user.galleries.find(:all)
+    @galleries = Gallery.find_all_by_user_id(@user)
+    #user = User.find(params[:user_id])
+    #@galleries = user.Gallery.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
     # Relationships
-    has_many :galleries
+    has_many :galleries , :dependent => :destroy
 
     #attr_accessor :first_name, :last_name, :email_id , :hashed_password , :salt
     # Attribute validations

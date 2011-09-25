@@ -1,18 +1,18 @@
 class PagesController < ApplicationController
   def home
-    @title="Home"
+    @title="fotographia"
   end
 
   def contact
-    @title="Contact"
+    @title="fotographia"
   end
 
   def about
-    @title="About"
+    @title="fotographia"
   end
 
   def register
-    @title="Sign-Up"
+    @title="fotographia"
   end
 
   def index
